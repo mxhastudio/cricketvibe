@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #006b3c;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00a85a;
+  }
+}
+
+@layer utilities {
+  /* Colors */
+  .text-pak-gold {
+    color: #d4af37;
+  }
+  .text-pak-green {
+    color: #006b3c;
+  }
+  .text-pak-green-light {
+    color: #00a85a;
+  }
+  .bg-pak-green {
+    background-color: #006b3c;
+  }
+  .bg-pak-green-dark {
+    background-color: #004d2b;
+  }
+  .bg-pak-gold {
+    background-color: #d4af37;
+  }
+  .bg-pak-gold-light {
+    background-color: #e8c84a;
+  }
+  .bg-bg-dark {
+    background-color: #0a0a0a;
+  }
+  .bg-bg-darker {
+    background-color: #050505;
+  }
+  .border-pak-green {
+    border-color: #006b3c;
+  }
+  .border-pak-gold {
+    border-color: #d4af37;
+  }
+
+  /* Glass effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #006b3c, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow effects */
+  .glow-green {
+    box-shadow: 0 0 20px rgba(0, 107, 60, 0.4);
+  }
+
+  /* Stadium lights effect */
+  .stadium-lights {
+    background:
+      radial-gradient(
+        ellipse at 20% 50%,
+        rgba(0, 107, 60, 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 80% 50%,
+        rgba(212, 175, 55, 0.05) 0%,
+        transparent 50%
+      );
+  }
+
+  /* News ticker animation */
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-ticker {
+    animation: ticker 30s linear infinite;
+    display: inline-block;
+  }
+
+  /* Font utilities */
+  .font-display {
+    font-family: "Oswald", "Impact", sans-serif;
+  }
+  .font-heading {
+    font-family: "Rajdhani", "Inter", sans-serif;
+  }
+  .font-body {
+    font-family: "Inter", sans-serif;
+  }
+  .font-600 {
+    font-weight: 600;
+  }
+  .font-700 {
+    font-weight: 700;
+  }
+}
